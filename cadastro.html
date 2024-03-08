@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="cadastro.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Site Profissional</title>
+    <style>
+        body {
+            background-color: #90ab85;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #467d63;
+            font-size: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #467d63;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #405f4e;
+        }
+        .signup-text {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .back-link {
+            display: block;
+            margin-top: 10px;
+            color: #467d63;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="signup-text">Fazer cadastro</div>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="surname">Sobrenome:</label>
+        <input type="text" id="surname" name="surname" required>
+
+        <label for="birthdate">Data de Nascimento:</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+
+        <label for="location">Local de Moradia:</label>
+        <input type="text" id="location" name="location" required>
+
+        <button type="submit">Cadastrar</button>
+        <button type="button" onclick="window.history.back()">Voltar</button>
+        <a href="login.html" class="back-link">Já tem cadastro? Faça login aqui</a>
+    </form>
+</body>
+</html>
+
