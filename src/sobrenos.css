@@ -49,3 +49,8 @@ nav {
   nav a:hover {
     background-color: #8590ab;
   }
+  img {
+    width: 433px; 
+    height: auto; 
+  }
+  
