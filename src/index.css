@@ -50,6 +50,15 @@ nav a:hover {
   background-color: #8590ab;
 }
 img {
-  width: 446px; 
+  width: 100px; 
   height: auto; 
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+div {
+width: 1330px;
+text-align: center;
+justify-content: center;
 }
