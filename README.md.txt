@@ -1,1 +1,1 @@
-Projeto de Tcc de 4 alunos do 6º período de informática do Instituto Federal de Educação, Ciência e Tecnologia do Rio de Janeiro.
+Projeto de Tcc de 4 alunos do 6ï¿½ perï¿½odo de informï¿½tica do Instituto Federal de Educaï¿½ï¿½o, Ciï¿½ncia e Tecnologia do Rio de Janeiro.
