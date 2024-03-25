@@ -53,4 +53,7 @@ nav {
     width: 433px; 
     height: auto; 
   }
-  
+  footer a {
+    text-decoration: none;
+    color: lightgreen;
+  }

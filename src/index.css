@@ -31,6 +31,11 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
+footer a {
+  text-decoration: none;
+  color: lightgreen;
+}
 nav {
   background-color: #467d63;
   padding: 10px;
@@ -50,11 +55,13 @@ nav a:hover {
   background-color: #0c2409;
 }
 img {
-  width: 150px; 
+  position: relative;
+  width: 250px;
+  right: -550px;
   height: auto; 
   align-items: center;
   justify-content: center;
-  display: inline-block;
+  display: relative;
   vertical-align: middle;
 }
 div {

@@ -17,8 +17,8 @@ box-shadow: 0 0 20px rgba(0, 0, 0, 1.0); /* Adicionado sombra */
 max-width: 400px;
 width: 100%;
 text-align: center;
-top: 180px;
-right: -500px;
+top: 85px;
+right: -450px;
 position: relative;
 }
 label {
@@ -98,4 +98,16 @@ header {
   }
 header {
   bottom: 300px;
+}
+footer {
+  background-color: #467d63;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+footer a {
+  text-decoration: none;
+  color: lightgreen;
 }
