@@ -1,9 +1,9 @@
 <?php
-// Configurações do banco de dados
-$servername = "localhost";  // Ou o endereço do seu servidor de banco de dados
-$username = "root";         // Seu usuário do banco de dados
-$password = "";             // Sua senha do banco de dados
-$dbname = "cadastro_db";    // Nome do banco de dados
+// Configuração da conexão com o banco de dados
+$servername = "localhost";
+$username = "medusa"; // Usuário padrão do MySQL no XAMPP
+$password = "poseidonbabaca"; // Senha padrão do MySQL no XAMPP
+$dbname = "site_profissional";
 
 // Criar conexão
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -13,25 +13,24 @@ if ($conn->connect_error) {
     die("Conexão falhou: " . $conn->connect_error);
 }
 
-// Receber dados do formulário
+// Coletar dados do formulário
 $email = $_POST['email'];
-$password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash da senha
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 $name = $_POST['name'];
 $surname = $_POST['surname'];
 $birthdate = $_POST['birthdate'];
 $location = $_POST['location'];
 
-// Preparar e executar a consulta SQL
-$sql = $conn->prepare("INSERT INTO usuarios (email, password, name, surname, birthdate, location) VALUES (?, ?, ?, ?, ?, ?)");
-$sql->bind_param("ssssss", $email, $password, $name, $surname, $birthdate, $location);
+// Inserir dados no banco de dados
+$sql = "INSERT INTO usuarios (email, password, name, surname, birthdate, location) 
+        VALUES ('$email', '$password', '$name', '$surname', '$birthdate', '$location')";
 
-if ($sql->execute()) {
-    echo "Cadastro realizado com sucesso!";
+if ($conn->query($sql) === TRUE) {
+    echo "Cadastro realizado com sucesso";
 } else {
-    echo "Erro: " . $sql->error;
+    echo "Erro: " . $sql . "<br>" . $conn->error;
 }
 
 // Fechar conexão
-$sql->close();
 $conn->close();
 ?>
