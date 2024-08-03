@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="src/relatos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Relato</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="fotos medusa/Design_Medusa.png" alt="Logo" /></a>
+        <nav>
+            <a href="sobrenos.html">Sobre nós</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="login.html">Login</a>
+            <a href="relatos.html">Relatos</a>
+        </nav>
+    </header>
+    <form id="relatoForm">
+        <h1 class="signup-text">Enviar Relato</h1>
+        <label for="relato">Seu Relato</label>
+        <textarea id="relato" name="relato" placeholder="Digite seu relato aqui..."></textarea>
+        <button type="button" onclick="enviarRelato()">Enviar Relato</button>
+    </form>
+    <script>
+        function enviarRelato() {
+            const relato = document.getElementById('relato').value;
+
+            fetch('http://localhost:3000/enviar-relato', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ relato })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Relato enviado com sucesso!');
+                } else {
+                    alert('Falha no envio do relato.');
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('Ocorreu um erro.');
+            });
+        }
+    </script>
+    <footer>
+        <p>&copy; Todos os direitos reservados à <a target="_blank"
+                href="https://www.instagram.com/batistavinii/">@batistavinii</a> , <a target="_blank" href="https://www.instagram.com/caio_lobov/">@caio_lobov</a> ,
+    <a target="_blank" href="https://www.instagram.com/fabi_falcao_/">@fabi_falcao_</a> e <a target="_blank" href="https://www.instagram.com/ei_elisapacheco/">@ei_elisapacheco</a>
+    </p>
+    </footer>
+</body>
+</html>
