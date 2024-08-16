@@ -55,8 +55,9 @@ nav a:hover {
   background-color: #0c2409;
 }
 img {
+  left: 475px;
   position: relative;
-  width: 250px;
+  width: 400px;
   right: -550px;
   height: auto; 
   align-items: center;
@@ -68,4 +69,18 @@ div {
 width: 1330px;
 text-align: center;
 justify-content: center;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  overflow-y: scroll; /* Garante a barra de rolagem vertical */
+}
+
+.content {
+  min-height: 150vh; /* Gera conteúdo que excede a altura da tela */
+  padding: 20px;
 }
