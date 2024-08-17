@@ -15,7 +15,7 @@ header {
 header img {
   position: absolute;
   left: 20px;
-  top: -10px;
+  top: -20px;
   width: 115px; 
   height: auto;
 }
@@ -30,6 +30,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+  background-color: #333;
 }
 
 footer a {
@@ -71,16 +72,50 @@ text-align: center;
 justify-content: center;
 }
 html, body {
-  margin: 0;
-  padding: 0;
   height: 100%;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
-  overflow-y: scroll; /* Garante a barra de rolagem vertical */
+  overflow-y: scroll; 
 }
 
 .content {
-  min-height: 150vh; /* Gera conteúdo que excede a altura da tela */
+  min-height: 150vh; 
   padding: 20px;
 }
+.topic1{ 
+text-align: left;
+left: 0px;
+position: relative;
+padding: 20px;
+bottom: -50px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+header {
+  text-align: center;
+}
+.news-carousel {
+  padding: 20px;
+}
+
+.flex-grow {
+  flex: 1;
+}
+
